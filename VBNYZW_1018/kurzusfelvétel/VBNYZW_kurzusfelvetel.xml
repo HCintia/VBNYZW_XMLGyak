@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<vbnyzw_kurzusfelvetel tanev="2023/24 I" egyetem="ME">
+  <hallgato>
+    <hnev>Hajdu Cintia</hnev>
+    <szulev>1993</szulev>
+    <szak evf="3">Gazdaságinformatikus</szak>
+  </hallgato>
+
+  <kurzusok>
+    <kurzus id="GEIAL332-B">
+      <kurzusnev>Adatkezelés XML környezetben</kurzusnev>
+      <kredit>5</kredit>
+      <hely>Inf. 103. terem</hely>
+      <idopont>Szerda 12:00-14:00</idopont>
+      <oktato>Dr. Bednarik László</oktato>
+    </kurzus>
+
+    <kurzus id="GEIAK130-B">
+      <kurzusnev>Mesterséges intelligencia</kurzusnev>
+      <kredit>5</kredit>
+      <hely>XXXII A1 magasfsz</hely>
+      <idopont>Kedd 10:00-12:00</idopont>
+      <oraado>Kunné Dr. Tamás Judit</oraado>
+      <nyelv>angol</nyelv>
+    </kurzus>
+
+    <kurzus id="" jovahagyas="igen">
+      <kurzusnev>	Pénzügytan</kurzusnev>
+      <kredit>5</kredit>
+      <hely>XXXVII A3</hely>
+      <idopont>Hétfő 10:00-12:00</idopont>
+      <oktato>Dr. Bozsik Sándor</oktato>
+    </kurzus>
+
+    <kurzus id="" jovahagyas="nem">
+      <kurzusnev>	Programozás-elmélet</kurzusnev>
+      <kredit>5</kredit>
+      <hely>A1/ 13 A1 magasfsz. 13</hely>
+      <idopont>Kedd 12:00-14:00</idopont>
+      <oraado>Dr. Házy Attila</oraado>
+    </kurzus>
+    
+   
+  </kurzusok>
