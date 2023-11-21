@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE VBNYZW_orarend
+[
+<!ELEMENT orarend (ora*)>
+<!ELEMENT ora (targy*,idopont*,helyszin*,oktato*,szak*)>
+<!ELEMENT targy EMPTY>
+<!ELEMENT idopont EMPTY>
+<!ELEMENT helyszin EMPTY>
+<!ELEMENT oktato EMPTY>
+<!ELEMENT szak EMPTY>
+
+<!ATTLIST targy id ID #REQUIRED>
+
+<!ATTLIST idopont nap ID #REQUIRED>
+<!ATTLIST idopont tol CDATA #REQUIRED>
+<!ATTLIST idopont ig CDATA #REQUIRED>
+
+<!ATTLIST helyszin id ID #REQUIRED>
+
+<!ATTLIST oktato id ID #REQUIRED>
+
+<!ATTLIST szak id ID #REQUIRED>
+
+]>
