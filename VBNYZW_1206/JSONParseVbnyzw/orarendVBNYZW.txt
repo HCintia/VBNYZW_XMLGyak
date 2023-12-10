@@ -1,0 +1,89 @@
+{
+  "orarendVBNYZW":{
+    "ora":[
+      {
+        "@id": "1",
+        "@tipus": "eloadas",
+        "targy": "Pénzügytan",
+        "idopont": {
+          "nap": "Hétfõ",
+          "tol": "10:00",
+          "ig": "12:00"
+        },
+        "helyszin": "XXXVII A3",
+        "oktato": "Dr. Bozsik Sándor",
+        "szak": "Gazdaságinformatikus"
+      },
+
+      {
+        "@id": "2",
+        "@tipus": "gyakorlat",
+        "targy": "Pénzügytan",
+        "idopont": {
+          "nap": "Hétfõ",
+          "tol": "12:00",
+          "ig": "14:00"
+        },
+        "helyszin": "XXXVII A3",
+        "oktato": "Dr. Bozsik Sándor",
+        "szak": "Gazdaságinformatikus"
+      },
+
+      {
+        "@id": "3",
+        "@tipus": "eloadas",
+        "targy": "Adatkezelés XML nyelven",
+        "idopont": {
+          "nap": "Kedd",
+          "tol": "12:00",
+          "ig": "14:00"
+        },
+        "helyszin": "A1 XXXII",
+        "oktato": "Dr. Bednarik László",
+        "szak": "Gazdaságinformatikus"
+      },
+
+      {
+        "@id": "4",
+        "@tipus": "eloadas",
+        "targy": "Mesterséges intelligencia",
+        "idopont": {
+          "nap": "Kedd",
+          "tol": "14:00",
+          "ig": "16:00"
+        },
+        "helyszin": "XXXII A1 magasfsz",
+        "oktato": "Kunné Dr. Tamás Judit",
+        "szak": "Gazdaságinformatikus"
+      },
+
+      {
+        "@id": "5",
+        "@tipus": "gyakorlat",
+        "targy": "Mesterséges intelligencia",
+        "idopont": {
+          "nap": "Kedd",
+          "tol": "16:00",
+          "ig": "18:00"
+        },
+        "helyszin": "XXXII A1 magasfsz",
+        "oktato": "Kunné Dr. Tamás Judit",
+        "szak": "Gazdaságinformatikus"
+      },
+
+      {
+        "@id": "6",
+        "@tipus": "gyakorlat",
+        "targy": "Adatkezelés XML nyelven",
+        "idopont": {
+          "nap": "Szerda",
+          "tol": "12:00",
+          "ig": "14:00"
+        },
+        "helyszin": "Inf 103",
+        "oktato": "Dr. Bednarik László",
+        "szak": "Gazdaságinformatikus"
+      },
+    ]
+  }
+}

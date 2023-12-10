@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<!DOCTYPE vbnyzworarend [
+  <!ELEMENT vbnyzworarend (ora+)>
+  <!ELEMENT ora (targy, idopont, helyszin, oktato, szak)>
+  <!ATTLIST ora
+    id CDATA #REQUIRED
+    tipus CDATA #REQUIRED
+  >
+  <!ELEMENT targy (#PCDATA)>
+  <!ELEMENT idopont (nap, tol, ig)>
+  <!ELEMENT helyszin (#PCDATA)>
+  <!ELEMENT oktato (#PCDATA)>
+  <!ELEMENT szak (#PCDATA)>
+  <!ELEMENT nap (#PCDATA)>
+  <!ELEMENT tol (#PCDATA)>
+  <!ELEMENT ig (#PCDATA)>
+]>-->
+
+<vbnyzworarend>
+
+	<ora id="1" tipus="Előadás">
+		<targy>Pénzügytan</targy>
+		<idopont>
+			<nap>Hétfő</nap>
+			<tol>10:00</tol>
+			<ig>12:00</ig>
+		</idopont>
+		<helyszin>XXXVII A3</helyszin>
+		<oktato>Dr. Bozsik Sándor</oktato>
+		<szak>Gazdaságinformatikus</szak>
+	</ora>
+
+	<ora id="2" tipus="Gyakorlat">
+		<targy>Pénzügytan</targy>
+		<idopont>
+			<nap>Hétfő</nap>
+			<tol>12:00</tol>
+			<ig>14:00</ig>
+		</idopont>
+		<helyszin>XXXVII A3</helyszin>
+		<oktato>Dr. Bozsik Sándor</oktato>
+		<szak>Gazdaságinformatikus</szak>
+	</ora>
+
+	<ora id="3" tipus="Előadás">
+		<targy>Adatkezelés XML nyelven</targy>
+		<idopont>
+			<nap>Kedd</nap>
+			<tol>12:00</tol>
+			<ig>14:00</ig>
+		</idopont>
+		<helyszin>A1 XXXII</helyszin>
+		<oktato>Bednarik Lácló</oktato>
+		<szak>Gazdaságinformatikus</szak>
+	</ora>
+
+	<ora id="4" tipus="Előadás">
+		<targy>Mesterséges intelligencia</targy>
+		<idopont>
+			<nap>Kedd</nap>
+			<tol>14:00</tol>
+			<ig>16:00</ig>
+		</idopont>
+		<helyszin>XXXII A1 magasfsz</helyszin>
+		<oktato>Kunné Dr. Tamás Judit</oktato>
+		<szak>Gazdaságinformatikus</szak>
+	</ora>
+
+	<ora id="5" tipus="Gyakorlat">
+		<targy>Mesterséges intelligencia</targy>
+		<idopont>
+			<nap>Kedd</nap>
+			<tol>16:00</tol>
+			<ig>18:00</ig>
+		</idopont>
+		<helyszin>XXXII A1 magasfsz</helyszin>
+		<oktato>Kunné Dr. Tamás Judit</oktato>
+		<szak>Gazdaságinformatikus</szak>
+	</ora>
+
+	<ora id="6" tipus="Gyakorlat">
+		<targy>Adatkezelés XML nyelven</targy>
+		<idopont>
+			<nap>Szerda</nap>
+			<tol>12:00</tol>
+			<ig>14:00</ig>
+		</idopont>
+		<helyszin>Inf 103</helyszin>
+		<oktato>Dr. Bednarik László</oktato>
+		<szak>Gazdaságinformatikus</szak>
+	</ora>
+</vbnyzworarend>
