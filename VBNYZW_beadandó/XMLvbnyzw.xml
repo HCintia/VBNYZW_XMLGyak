@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<tancegyesulet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="XSDvbnyzw.xsd">
+
+	<!-- Egyesületek -->
+	<!-- eleje -->
+	<egyesulet ekod="1">
+		<havidij>10000</havidij>
+		<nev>Ködmön</nev>
+		<cim>
+			<utca>Majoros</utca>
+			<varos>Miskolc</varos>
+			<iranyitoszam>3524</iranyitoszam>
+		</cim>
+		<alep>1993</alep>
+	</egyesulet>
+	
+	<egyesulet ekod="2">
+		<havidij>12000</havidij>
+		<nev>Lazúr</nev>
+		<cim>
+			<utca>Hóvirág</utca>
+			<varos>Miskolc</varos>
+			<iranyitoszam>3525</iranyitoszam>
+		</cim>
+		<alev>1997</alev>
+	</egyesulet>
+	
+	<egyesulet ekod="3">
+		<havidij>15000</havidij>
+		<nev>Savaria</nev>
+		<cim>
+			<utca>Király</utca>
+			<varos>Szombathely</varos>
+			<iranyitoszam>3800</iranyitoszam>
+		</cim>
+		<alev>2000</alev>
+	</egyesulet>
+	<!-- vége -->
+	
+	
+	<!-- Tánccsoport szövetség -->
+	<!-- eleje -->
+	<tanccsop egy_idgnkulcs="1" tanc_idgnkulcs="1" vers_idgnkulcs="01" szurk_idgnkulcs="0001" prod_idgkulcs="0001"/>
+	<!-- vége -->
+	
+	<!-- Táncosok -->
+	<!-- eleje -->
+	<tancos tkod="001">
+		<korcsoport>A</korcsoport>
+		<t_szuldat>1991.01.01.</t_szuldat>
+		<t_nev>Kiss Szimonetta</t_nev>
+		<t_stilus>latin</t_stilus>
+	</tancos>
+	
+	<tancos tkod="002">
+		<korcsoport>B</korcsoport>
+		<t_szuldat>1994.04.16.</t_szuldat>
+		<t_nev>Fenyves Béla</t_nev>
+		<t_stilus>latin</t_stilus>
+	</tancos>
+	
+	<tancos tkod="003">
+		<korcsoport>C</korcsoport>
+		<t_szuldat>1986.05.23.</t_szuldat>
+		<t_nev>Fekete Nóra</t_nev>
+		<t_stilus>standard</t_stilus>
+	</tancos>
+	
+	<tancos tkod="004">
+		<korcsoport>C</korcsoport>
+		<t_szuldat>1997.08.02.</t_szuldat>
+		<t_nev>Kiss Zoltán</t_nev>
+		<t_stilus>standard</t_stilus>
+	</tancos>
+	
+	<tancos tkod="005">
+		<korcsoport>A</korcsoport>
+		<t_szuldat>2000.01.22.</t_szuldat>
+		<t_nev>Kovács Ádám</t_nev>
+		<t_stilus>standard</t_stilus>
+	</tancos>
+	
+	<tancos tkod="006">
+		<korcsoport>C</korcsoport>
+		<t_szuldat>1991.12.11.</t_szuldat>
+		<t_nev>Mezei Hanga</t_nev>
+		<t_stilus>latin</t_stilus>
+	</tancos>
+	<!-- vége -->
+	
+	
+	<!-- Versenyek -->
+	<!-- eleje -->
+	<verseny vkod="01">
+		<idopont>2024.04.27</idopont>
+		<helyszin>Tiszaújváros Sportcsarnok</helyszin>
+		<szervezo>Malek Andrea</szervezo>
+	</verseny>
+	
+	<verseny vkod="02">
+		<idopont>2024.06.06</idopont>
+		<helyszin>Sátoraljaújhely Sportcsarnok</helyszin>
+		<szervezo>Zsámboki Marcell</szervezo>
+	</verseny>
+	<!-- vége -->
+
+	<!-- Nevez -->
+	<!-- eleje -->
+	<nevez nkod="1" n_v_idgnkulcs="01">
+		<nevdij>5000</nevdij>
+	</nevez>
+	<!-- vége -->
+	
+	
+	<!-- Szurkolók -->
+	<!-- eleje -->
+	<szurkolo szkod="0001">
+		<sz_nev>Győri Eszter</sz_nev>
+		<sz_szuldat>1978.05.24</sz_szuldat>
+	</szurkolo>
+	
+	<szurkolo szkod="0002">
+		<sz_nev>Kovács Margit</sz_nev>
+		<sz_szuldat>1990.04.25</sz_szuldat>
+	</szurkolo>
+	
+	<szurkolo szkod="0003">
+		<sz_nev>Hajdu Péter</sz_nev>
+		<sz_szuldat>1991.02.07</sz_szuldat>
+	</szurkolo>
+	
+	<szurkolo szkod="0004">
+		<sz_nev>Boros Balázs</sz_nev>
+		<sz_szuldat>1990.06.17</sz_szuldat>
+	</szurkolo>
+	
+	<szurkolo szkod="0005">
+		<sz_nev>Horváth Gergely</sz_nev>
+		<sz_szuldat>1967.12.21</sz_szuldat>
+	</szurkolo>
+	
+	<szurkolo szkod="0006">
+		<sz_nev>Németh Márk</sz_nev>
+		<sz_szuldat>1974.08.19</sz_szuldat>
+	</szurkolo>
+	<!-- vége -->
+	
+	<!-- Produkciók -->
+	<!-- eleje -->
+	<produkcio pkod="0001">
+		<zene>Breakaway</zene>
+		<letszam>2</letszam>
+		<p_nev>Karácsony</p_nev>
+		<p_stilus>keringő</p_stilus>
+	</produkcio>
+	
+	<produkcio pkod="0002">
+		<zene>Zumba track</zene>
+		<letszam>16</letszam>
+		<p_nev>Karibi tánc</p_nev>
+		<p_stilus>latin</p_stilus>
+		<p_stilus>zumba</p_stilus>
+	</produkcio>
+	
+	<produkcio pkod="0003">
+		<zene>Paso soundtrack</zene>
+		<letszam>6</letszam>
+		<p_nev>Torreádor</p_nev>
+		<p_stilus>pasodoble</p_stilus>
+	</produkcio>
+	
+	<produkcio pkod="0004">
+		<zene>Moulin Rouge</zene>
+		<letszam>2</letszam>
+		<p_nev>Roxanne</p_nev>
+		<p_stilus>tango</p_stilus>
+	</produkcio>
+	
+	<produkcio pkod="0005">
+		<zene>Fall in love</zene>
+		<letszam>1</letszam>
+		<p_nev>Szerelem</p_nev>
+		<p_stilus>rumba</p_stilus>
+	</produkcio>
+	
+	<produkcio pkod="0006">
+		<zene>Mika Grace Kelly</zene>
+		<letszam>10</letszam>
+		<p_nev>Lollipop</p_nev>
+		<p_stilus>cha cha cha</p_stilus>
+	</produkcio>
+	<!-- vége -->
+
+	
+</tancegyesulet>
