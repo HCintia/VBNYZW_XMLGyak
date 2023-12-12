@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Elemek -->
+
+  <xs:element name="havidij" type="xs:integer"/>
+  <xs:element name="nev" type="xs:string"/>
+  <xs:element name="alev" type="xs:integer"/>
+  <xs:element name="utca" type="xs:integer"/>
+  <xs:element name="varos" type="xs:integer"/>
+  <xs:element name="iranyitoszam" type="xs:integer"/>
+  <xs:element name="korcsoport" type="xs:string"/>
+  <xs:element name="t_nev" type="xs:string"/>
+  <xs:element name="t_stilus" type="xs:string"/>
+  <xs:element name="helyszin" type="xs:string"/>
+  <xs:element name="szervezo" type="xs:string"/>
+  <xs:element name="nevdij" type="xs:integer"/>
+  <xs:element name="sz_nev" type="xs:string"/>
+  <xs:element name="zene" type="xs:string"/>
+  <xs:element name="letszam" type="xs:integer"/>
+  <xs:element name="p_nev" type="xs:string"/>
+  <xs:element name="p_stilus" type="xs:string"/>
+  <xs:element name="nevez" type="xs:string"/>
+  <xs:element name="ev" type="xs:integer"/>
+  <xs:element name="honap" type="xs:integer"/>
+  <xs:element name="nap" type="xs:integer"/>
+
+
+  <!-- Attribútumok -->
+
+  <xs:attribute name="ekod" type="xs:string"/>
+  <xs:attribute name="egy_idgkulcs" type="xs:string"/>
+  <xs:attribute name="prod_idgkulcs" type="xs:string"/>
+  <xs:attribute name="szurk_idgkulcs" type="xs:string"/>
+  <xs:attribute name="vers_idgkulcs" type="xs:string"/>
+  <xs:attribute name="tanc_idgkulcs" type="xs:string"/>
+  <xs:attribute name="n_v_idgkulcs" type="xs:string"/>
+  <xs:attribute name="t_kod" type="xs:string"/>
+  <xs:attribute name="v_kod" type="xs:string"/>
+  <xs:attribute name="sz_kod" type="xs:string"/>
+  <xs:attribute name="n_kod" type="xs:string"/>
+  <xs:attribute name="p_kod" type="xs:string"/>
+
+
+  <!-- Egyszerű típusok -->
+
+  <xs:simpleType name="letszamType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{4}" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Összetett típusok -->
+
+  <xs:complexType name="cimType">
+    <xs:sequence>
+      <xs:element ref="utca"/>
+      <xs:element ref="varos"/>
+      <xs:element ref="iranyitoszam"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="datumType">
+    <xs:sequence>
+      <xs:element ref="ev"/>
+      <xs:element ref="honap"/>
+      <xs:element ref="iranyitoszam"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="egyesuletType">
+    <xs:sequence>
+      <xs:element ref="havidij"/>
+      <xs:element ref="nev"/>      
+      <xs:element name="cim" type="cimType"/>
+      <xs:element ref="ev"/>
+    </xs:sequence>
+    <xs:attribute ref="ekod" use="required"/>
+  </xs:complexType>
+
+   <xs:complexType name="tancosType">
+    <xs:sequence>
+      <xs:element ref="korcsoport"/>
+      <xs:element name="t_szuldat" type="datumType"/>      
+      <xs:element ref="t_nev"/>
+      <xs:element ref="t_stilus"/>
+    </xs:sequence>
+    <xs:attribute ref="t_kod" use="required"/>
+  </xs:complexType>
+
+   <xs:complexType name="versenyType">
+    <xs:sequence>
+      <xs:element name="idopont" type="datumType"/>
+      <xs:element ref="helyszin"/>
+      <xs:element ref="szervezo"/>
+    </xs:sequence>
+    <xs:attribute ref="v_kod" use="required"/>
+  </xs:complexType>
+
+   <xs:complexType name="szurkoloType">
+    <xs:sequence>
+      <xs:element ref="sz_nev"/>
+      <xs:element name="sz_szuldat" type="datumType"/>
+    </xs:sequence>
+    <xs:attribute ref="sz_kod" use="required"/>
+  </xs:complexType>
+
+   <xs:complexType name="produkcioType">
+    <xs:sequence>
+      <xs:element ref="zene"/>
+      <xs:element name="letszam" type="letszamType"/>
+      <xs:element ref="p_nev"/>
+      <xs:element ref="p_stilus"/>
+    </xs:sequence>
+    <xs:attribute ref="p_kod" use="required"/>
+  </xs:complexType>
+
+
+  <!-- N:M kapcsolat-->
+
+  <xs:complexType name="nevezType">
+    <xs:sequence>
+      <xs:element ref="nevdij"/>
+    </xs:sequence>
+    <xs:attribute ref="vkod" use="required"/>
+    <xs:attribute ref="n_v_idgkulcs" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="tancsportegyesuletType">
+    <xs:attribute ref="egy_idgkulcs" use="required"/>
+    <xs:attribute ref="prod_idgkulcs" use="optional"/>
+    <xs:attribute ref="szurk_idgkulcs" use="optional"/>
+    <xs:attribute ref="vers_idgkulcs" use="optional"/>
+    <xs:attribute ref="tanc_idgkulcs" use="optional"/>
+  </xs:complexType>
+
+  <!-- Táncegyesület -->
+
+  <xs:element name="tancegyesulet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="egyesulet" type="egyesuletType"maxOccurs="unbounded"/>
+        <xs:element name="tancos" type="tancosType"maxOccurs="unbounded"/>
+        <xs:element name="verseny" type="versenyType" maxOccurs="unbounded"/>
+        <xs:element name="nevez" type="nevezType" maxOccurs="unbounded"/>
+        <xs:element name="szurkolo" type="szurkoloType" maxOccurs="unbounded"/>
+        <xs:element name="produkcio" type="produkcioType" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+
+    <!-- Elsődleges kulcsok -->
+
+    <xs:unique name="ekod">
+      <xs:selector xpath="egyesulet"/>
+      <xs:field xpath="@ekod"/>
+    </xs:unique>
+
+    <xs:unique name="tkod">
+      <xs:selector xpath="tancos"/>
+      <xs:field xpath="@tkod"/>
+    </xs:unique>
+
+    <xs:unique name="vkod">
+      <xs:selector xpath="verseny"/>
+      <xs:field xpath="@vkod"/>
+    </xs:unique>
+
+    <xs:unique name="nkod">
+      <xs:selector xpath="nevez"/>
+      <xs:field xpath="@nkod"/>
+    </xs:unique>
+
+    <xs:unique name="szkod">
+      <xs:selector xpath="szurkolo"/>
+      <xs:field xpath="@szkod"/>
+    </xs:unique>
+
+    <xs:unique name="pkod">
+      <xs:selector xpath="produkcio"/>
+      <xs:field xpath="@pkod"/>
+    </xs:unique>
+  
+
+    <!-- Idegenkulcsok -->
+
+    <xs:keyref name="egy_idgkulcsFK" refer="ekod">
+      <xs:selector xpath="egyesulet"/>
+      <xs:field xpath="@egy_idgkulcs"/>
+    </xs:keyref>
+
+    <xs:keyref name="prod_idgkulcsFK" refer="pkod">
+      <xs:selector xpath="produkcio"/>
+      <xs:field xpath="@prod_idegkulcs"/>
+    </xs:keyref>
+
+    <xs:keyref name="szurk_idgkulcsFK" refer="szkod">
+      <xs:selector xpath="szurkolo"/>
+      <xs:field xpath="szurk_idgkulcs"/>
+    </xs:keyref>
+
+    <xs:keyref name="vers_idgkulcsFK" refer="nkod">
+      <xs:selector xpath="nevez"/>
+      <xs:field xpath="vers_idgkulcs"/>
+    </xs:keyref>
+
+    <xs:keyref name="tanc_idgkulcsFK" refer="tkod">
+      <xs:selector xpath="tancos"/>
+      <xs:field xpath="tanc_idgkulcs"/>
+    </xs:keyref>
+
+    <xs:keyref name="n_v_idgkulcsFK" refer="vkod">
+      <xs:selector xpath="verseny"/>
+      <xs:field xpath="n_v_idgkulcsFK"/>
+    </xs:keyref>
+
+  </xs:element>
+
+</xs:schema>
